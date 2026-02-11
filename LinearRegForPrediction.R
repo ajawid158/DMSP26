@@ -8,7 +8,7 @@ names(x)
 dim(x)
 
 
-##Probem: we want to predict Employee's Spending using a vector of 
+##Problem: we want to predict Employee's Spending using a vector of 
 #relevant predictors X, such as Salary, Gender, Working Hrs, etc.
 
 

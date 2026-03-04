@@ -4,7 +4,7 @@ g=read.csv("grades1.csv")
 head(g)
 View(g)
 
-#Problem: predict whether a new student belogs to A or Not A group 
+#Problem: predict whether a new student belongs to A or Not A group 
 #using their Midterm and Quizzes scores
 
 ###create predictor matrix and classification matrix
@@ -25,13 +25,13 @@ test.y=g.y[-s]
 NROW(train.y)
 
 ###Specify k
-sqrt(95)  ###k=11 better to be odd
+sqrt(93)  ###k=11 better to be odd
 #install.packages("class")
 library(class)
 
 g.knn=knn(train = g.train, test = g.test, cl = train.y, k=9)
 table(g.knn)  #predicted by knn
-table(test.y)   #actual data
+table(test.y)   #actual grades
 
 ##Confusion matrix
 table(test.y, g.knn)

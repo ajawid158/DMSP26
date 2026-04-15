@@ -1,6 +1,7 @@
 #ITC360 Supervised Learning Methods: DT
 
 g=read.csv("grades1.csv")
+View(g)
 #install.packages("rpart")
 #install.packages("rpart.plot")
 library(rpart)
@@ -23,6 +24,8 @@ g.test=g_sub[-s,]
 fit=rpart(Grade~., data = g.train, method = "class")
 rpart.plot(fit, extra = 106)
 
+head(g.test)
+
 pred=predict(fit, g.test, type = "class")
 head(pred)
 
@@ -30,6 +33,7 @@ table(g.test$Grade, pred) #confusion matrix
 Err.rate=3/NROW(g.test)
 Err.rate #12.5%
 
+prop.table(table(g.train$Grade))
 
 ####New Dataset
 Q=c(89, 80, 30)

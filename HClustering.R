@@ -35,7 +35,7 @@ plot(h1)
 hw.cl=cutree(h1, 2)
 hw.cl
 
-#Afterwork tasks
+#After work tasks
 
 g1=g1 %>%
   mutate(hw.cl)

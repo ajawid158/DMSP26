@@ -36,11 +36,11 @@ g1=g1 %>%
   mutate(h.w.cl)
 head(g1)
 
+
 #visualize the clusters
-plot(g1$Height, g1$Weight, 
+plot(g1$Weight, g1$Height, 
      col=g1$h.w.cl, 
      pch=8)
-
-legend(180, 80, unique(g1$h.w.cl), 
+legend(82, 180, unique(g1$h.w.cl), 
        col = 1:2, pch = 8)
 

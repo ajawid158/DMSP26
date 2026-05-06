@@ -27,3 +27,4 @@ itemFrequencyPlot(q, support=0.5)
 
 m1= apriori(q)
 inspect(m1)
+
